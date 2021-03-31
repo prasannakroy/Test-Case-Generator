@@ -13,13 +13,14 @@ void solve() {
 	// auto a = generateArray(5, 0, 5, 0, {'/', '*', '+'}); // generate an array of string of length 5 with each element being a string of length 5.
 	// for (auto &i: a) cout << i << "\n";
 	// cout << "\n";
-	// int dim = 3;
-	// vector<int> a = {2, 2, 3};
+	// int dim = 5;
+	// vector<int> a = {2, 2, 3, 2, 2};
 	// vector<char> lst;
-	// generateMultiDimensionalArray(dim, a, 20, 100);
+	// double x = 20.0, y = 100.0;
+	// generateMultiDimensionalArray(dim, a, x, y);
 	// generateMultiDimensionalArray(dim, a, lst, 1, 10, -1);
 	int n = 5;
-	auto tr = generateTree(5, true, 1, 20, 1, 3);
+	auto tr = generateTree(5, false, 1, 20, 1, 5);
 	for (int i = 1; i <= n; i++) cout << tr.parent[i] << " ";
 	cout << "\n";
 	for (auto &edge : tr.edges) 
