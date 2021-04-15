@@ -34,6 +34,15 @@ auto generateArray(int sz, vector<char> lst = {}, int minLen = 1,  int maxLen = 
 	return a;
 }
 
+// Permutation Generator
+/* Parameters (Size of permutation) */
+auto generatePermutation(int n) {
+	vector<int> a(n);
+	iota(begin(a), end(a), 1);
+	shuffle(begin(a), end(a), default_random_engine(time(NULL)));
+	return a;
+}
+
 
 /*
 *********************************

@@ -9,13 +9,8 @@ using namespace std;
 #define double long double
 
 void solve() {
-	vector<char> lst = {'.', '+', '*', '/', '-', '='};
-	vector<int> dm = {3, 3};
-	auto res = *generateMultiDimensionalArray(2, dm, lst, 5, 7, 1);
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) cout << res[i][j].data << " ";
-		cout << "\n";
-	}
+	auto lst = generateDirectedGraphList(10, 15, 1, 10, 250);
+	for (auto &i: lst) cout << i[0] << " " << i[1] << " " << i[2] << "\n";
 }
 
 signed main() {
