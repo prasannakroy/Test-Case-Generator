@@ -21,11 +21,10 @@ function saveFile() {
       headers: {
         "Content-Type": "application/json",
       },
-    })
+    });
 
     window.open('/send-file'); //does the download
   }
 
-  
   orderRun();
 }

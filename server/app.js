@@ -33,7 +33,7 @@ app.get('/form', (req, res) => {
 });
 
 app.get("/send-file", (req, res) => {
-  console.log("sendFile route")
+  console.log("sendFile route");
   res.download(path.join(__dirname, '/output.txt'), "output.txt" ,(err) => {
     if (err) {
       console.log('error:', err.message);
@@ -56,10 +56,9 @@ app.post("/submit-form", (req, res) => {
     exec('./Main < input.txt > output.txt', (err, stdout, sterr) => {
       if (err) console.log(err.message);
       if (stdout) console.log(stdout)
-      if (err) console.log(serr)
+      if (err) console.log(serr);
       else {
         console.log('Done');
-        // res.redirect('/send-file');
         res.send('success');
       }
     });
