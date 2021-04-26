@@ -33,6 +33,7 @@ app.get('/form', (req, res) => {
 });
 
 app.get("/send-file", (req, res) => {
+  console.log("sendFile route")
   res.download(path.join(__dirname, '/output.txt'), "output.txt" ,(err) => {
     if (err) {
       console.log('error:', err.message);
@@ -41,7 +42,6 @@ app.get("/send-file", (req, res) => {
       console.log("file sent");
     }
   });
-	// res.sendFile(path.join(__dirname, '/output.txt'));
 });
 
 app.post("/submit-form", (req, res) => {
@@ -51,17 +51,19 @@ app.post("/submit-form", (req, res) => {
     console.log('done');
   });
   
-  exec(`g++ ${pathToCpp} -o Main`, (err, stdout, stdin) => {
+  exec(`g++ ${pathToCpp} -o Main`, (err, stdout, sterr) => {
     console.log('run')
-    exec('./Main < input.txt', (err, stdout, stdin) => {
-      if (err) {
-        console.log(err.message);
+    exec('./Main < input.txt > output.txt', (err, stdout, sterr) => {
+      if (err) console.log(err.message);
+      if (stdout) console.log(stdout)
+      if (err) console.log(serr)
+      else {
+        console.log('Done');
+        // res.redirect('/send-file');
+        res.send('success');
       }
-      console.log('Done');
     });
   });
-  res.end();
-  
 });
 
 const PORT = process.env.PORT || 5000;

@@ -14,16 +14,18 @@ function saveFile() {
   };
 
   async function orderRun() {
+    console.log("fetching")
     const res = await fetch("/submit-form", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
-    });
-    
-    location.href = '/send-file';
+    })
+
+    window.open('/send-file'); //does the download
   }
 
+  
   orderRun();
 }
