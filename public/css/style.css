@@ -90,6 +90,10 @@ h1 a {
   justify-content: space-between;
 }
 
+.card-desc p {
+  color: var(--secondary-color);
+}
+
 .card-desc p a {
   color: var(--secondary-color);
   font-family: var(--secondary-color);
