@@ -14,6 +14,10 @@ body {
   font-family: var(--primary-text);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header */
 
 .header {
@@ -21,6 +25,10 @@ body {
   color: var(--primary-color);
   margin: 1rem;
   font-family: var(--header-text);
+}
+
+h1 a {
+  color: var(--primary-color);
 }
 
 
@@ -37,7 +45,6 @@ body {
 
 .nav a {
   text-align: center;
-  text-decoration: none;
   color: var(--secondary-color);
   padding: 0.8%;
   overflow: hidden;
@@ -49,10 +56,6 @@ body {
   background-color: #0b154d;
 }
 
-.clearfix {
-  clear: both;
-}
-
 /* Content Body */
 
 .description{
@@ -62,6 +65,7 @@ body {
 .cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -72,6 +76,7 @@ body {
   height: 238.5px;
   width: 300px;
   padding: 7px;
+  margin-top: 10px;
 }
 
 .algo-cards img {
@@ -85,7 +90,7 @@ body {
   justify-content: space-between;
 }
 
-.card-desc p {
+.card-desc p a {
   color: var(--secondary-color);
   font-family: var(--secondary-color);
 }
@@ -101,6 +106,53 @@ body {
 }
 
 .card-desc button:hover {
+  background-color: rgb(236, 217, 217);
+}
+
+/* Form */
+
+.form {
+  margin: 0 15% 0 15%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.ds-name {
+  margin: 10px;
+  border: 2px solid var(--secondary-color);
+  font-size: 1.2em;
+  font-weight: bold;
+} 
+
+.form p {
+  margin-bottom: 0;
+}
+
+.form input {
+  margin-bottom: 10px;
+  text-align: center;
+  height: 20px;
+  width: fit-content;
+}
+
+.submit {
+  margin: 20px auto 20px auto;
+  width: fit-content;
+  background-color: var(--primary-color);
+}
+
+.submit input {
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  font-size: 2em;
+  height: auto;
+  color: var(--primary-color);
+}
+
+.submit input:hover {
   background-color: rgb(236, 217, 217);
 }
 

@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
-	<title>NumArray</title>
+	<title>TestHub</title>
 </head>
 <body>
 	<!-- Header -->
@@ -16,42 +16,34 @@
 	<!-- Nav -->
 	<div class="nav">
 		<a href="/about">About Us</a>
-		<a href="https://github.com/prasannakroy/Test-Case-Generator/" target="_blank">Source Code</a>
+		<a href="https://github.com/prasannakroy/Test-Case-Generator/">Source Code</a>
 		<a href="#footer">Contact Us</a>
 	</div>
 
 	<!-- Section -->
-	<section>
-		<div>
-			<!-- Description -->
-			<div class="description">
-				Lorem ipsum dolor sinit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</div>
-			<!-- Element Cards -->
-			<div class="cards">
-				<div class="algo-cards">
-					<img src="./image/Arrays.png">
-					<div class="card-desc">
-						<p>Simple Array</p>
-					</div>
-				</div>
-
-				<div class="algo-cards">
-					<img src="./image/Arrays.png">
-					<div class="card-desc">
-						<p>Permutation</p>
-					</div>
-				</div>
-
-				<div class="algo-cards">
-					<img src="./image/Arrays.png">
-					<div class="card-desc">
-						<p>Sorted Array</p>
-					</div>	
-				</div>
-			</div>
-		</div>
-	</section>
+	
+  <div class="form">
+    <div id="ds-name">numArray</div>
+    <div class="attributes">
+      <p>Enter No. of Dimensions : </p>
+      <input type="number" id="dimensions" placeholder="1 <= Dimension <= 1000"/>
+    </div>
+    <div class="attributes">
+      <p>Dimension Size List (Enter Dimension size in reverse order as space separated integers, for example, for 3 * 4 * 2 cube enter 2 4 3) : </p>
+      <input type="text" id="size" placeholder="Product <= 1000000"/>
+    </div>
+    <div class="attributes">
+      <p>Lower Bound Elements : </p>
+      <input type="number" id="lBound" placeholder="-2^63 <= lBound < 2^63"/>
+    </div>
+    <div class="attributes">
+      <p>Upper Bound Elements : </p>
+      <input type="number" id="rBound" placeholder="lbound <= rbound < 2^63"/>
+    </div>
+    <div class="submit">
+      <input type="button" id="bt" value="Generate" onclick="saveFile()"/>
+    </div>
+  </div>
 
 	<!-- Footer -->
 	<footer class="footer" id="footer">
@@ -71,6 +63,6 @@
 		</div>
 		<p class="copyright">Prasanna Kumar © 2021</p>
 	</footer>
-
 </body>
+<script type="text/javascript" src="./js/index.js"></script> 
 </html>
