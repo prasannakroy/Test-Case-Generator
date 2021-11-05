@@ -53,10 +53,10 @@ app.post("/submit-form", (req, res) => {
   
   exec(`g++ ${pathToCpp} -o Main`, (err, stdout, sterr) => {
     console.log('run')
-    exec('./Main < input.txt > output.txt', (err, stdout, sterr) => {
+    exec('Main < input.txt > output.txt', (err, stdout, sterr) => {
       if (err) console.log(err.message);
       if (stdout) console.log(stdout)
-      if (err) console.log(serr);
+      if (err) console.log(err);
       else {
         console.log('Done');
         res.send('success');
